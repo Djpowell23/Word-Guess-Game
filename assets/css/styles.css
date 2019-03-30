@@ -1,0 +1,41 @@
+header {
+    border: 1px solid black;
+    height: 150px;
+    font-size: 30px;
+    margin: 15px auto;
+    text-align: center;
+    width: 80%;
+}
+#totalWins {
+    border: 1px solid black;
+    /* height: 150px; */
+    font-size: 30px;
+    margin: 15px auto;
+    text-align: center;
+    /* width: 80%; */
+}
+#currentWord {
+    border: 1px solid black;
+    height: 40px;
+    font-size: 30px;
+    letter-spacing: 8px;
+    margin: 15px auto;
+    text-align: center;
+    /* width: 80%; */
+}
+#remainingGuesses {
+    border: 1px solid black;
+    /* height: 150px; */
+    font-size: 30px;
+    margin: 15px auto;
+    text-align: center;
+    /* width: 80%; */
+}
+#guessedLetters {
+    border: 1px solid black;
+    height: 40px;
+    font-size: 30px;
+    margin: 15px auto;
+    text-align: center;
+    /* width: 80%; */
+}
