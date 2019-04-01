@@ -1,5 +1,7 @@
 // Array of Words
 var words = ["monkey","fish","donkey","elephant","kangaroo"];
+var winImageAray = ["_../images/monkey-img-org.jpg","_../images/fish-img-org.jpg","_../images/donkey-img-org.jpeg","_../images/elephant-img-org.jpg","_../images/kangaroo-img-org.jpeg"];
+
 // Defining Variables
 const lives = 3;
 var guessedLetters = [];
@@ -9,12 +11,45 @@ var remainingGuesses = 3;
 var hasFinished = false;
 var wins = 0;
 
+// Computer Randomly picks a word and puts it into an index.
+currentWordIndex = Math.floor(Math.random() * (words.length));
+
+// My attempt at the audio
+// // Audio variables
+// var monkeyAudio = document.getElementById("monkeyAudio");
+// var fishAudio = document.getElementById("fishAudio");
+// var donkeyAudio = document.getElementById("donkeyAudio");
+// var elephantAudio = document.getElementById("elephantAudio");
+// var kangarooAudio = document.getElementById("kangarooAudio");
+
+// //Audio functions
+// function playMonkey() {
+//     monkeyAudio.src=""
+//     monkeyAudio.play();
+// }
+
+// function playFish() {
+//     fishAudio.play();
+// }
+
+// function playDonkey() {
+//     donkeyAudio.play();
+// }
+
+// function playElephant() {
+//     elephantAudio.play();
+// }
+
+// function playKangaroo() {
+//     kangarooAudio.play();
+// }
+
 // Function to set up all the variables
     // Reset Game Level Variables
     function resetGame() {
         remainingGuesses = lives;
 
-        // Computer Randomly picks a word and puts it into an index.
+        // // Computer Randomly picks a word and puts it into an index.
         currentWordIndex = Math.floor(Math.random() * (words.length));
 
         // Reset arrays
@@ -29,8 +64,12 @@ var wins = 0;
         // Hide the Game Over and win/text images
         document.getElementById("pressKeyTryAgain").style.cssText="display:none";
         document.getElementById("pressKeyKeepPlaying").style.cssText="display:none";
-        // document.getElementById("gameover-image").style.cssText = "display: none";
-        // document.getElementById("youwin-image").style.cssText = "display: none";
+        document.getElementById("winMonkeyImg").style.cssText = "display: none";
+        document.getElementById("winFishImg").style.cssText = "display: none";
+        document.getElementById("winDonkeyImg").style.cssText = "display: none";
+        document.getElementById("winElephantImg").style.cssText = "display: none";
+        document.getElementById("winKangarooImg").style.cssText = "display: none";
+
 
         // Runs function updateDisplay
         updateDisplay();
@@ -47,7 +86,6 @@ var wins = 0;
         document.getElementById("guessedLetters").innerText = guessedLetters;
         // If the user has lost
         if(remainingGuesses <= 0) {
-            // document.getElementById("gameover-image").style.cssText = "display: block";
             document.getElementById("pressKeyTryAgain").style.cssText = "display:block";
             hasFinished = true;
         }
@@ -109,10 +147,39 @@ function evaluateGuess(letter) {
 function checkWin() {
     // If there are no more "_"'s left in the guessingWord, you win and game finishes, ready to reset
     if(guessingWord.indexOf("_") === -1) {
+        //Section of if statements to display correct image after the answer is guessed.
+        if (currentWordIndex === 0) {
+            document.getElementById("winMonkeyImg").style.cssText="display:block";
+            // playMonkey();
+        } else if (currentWordIndex === 1) {
+            document.getElementById("winFishImg").style.cssText="display:block";
+            // fishAudio.play();
+        } else if (currentWordIndex === 2) {
+            document.getElementById("winDonkeyImg").style.cssText="display:block";
+            // playDonkey(25);
+            // donkeyAudio.currentTime="seconds";
+            // donkeyAudio.currentTime= 26;
+            // donkeyAudio.play();
+        } else if (currentWordIndex === 3) {
+            document.getElementById("winElephantImg").style.cssText="display:block";
+            // playElephant();
+            // elephantAudio.play();
+        } else if (currentWordIndex === 4) {
+            document.getElementById("winKangarooImg").style.cssText="display:block";
+            // playKangaroo();
+            // kangarooAudio.play();
+        }
+
         // document.getElementById("youwin-image").style.cssText = "display: block";
         document.getElementById("pressKeyKeepPlaying").style.cssText= "display: block";
         wins++;
         hasFinished = true;
     }
-
 };
+
+// Function to set a victory picture based on the chosen Word
+if (hasFinished === true) {
+    document.getElementById("")
+    document.getElementById("monkey-image").style.cssText="display:block"
+}
+

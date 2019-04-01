@@ -8,34 +8,45 @@ header {
 }
 #totalWins {
     border: 1px solid black;
-    /* height: 150px; */
+    background-color:white;
     font-size: 30px;
     margin: 15px auto;
     text-align: center;
-    /* width: 80%; */
+    width: 80%;
 }
 #currentWord {
     border: 1px solid black;
+    background-color:white;
+    color: black;
     height: 40px;
     font-size: 30px;
     letter-spacing: 8px;
     margin: 15px auto;
     text-align: center;
-    /* width: 80%; */
+    width: 80%;
+}
+#jumbo-head {
+    text-align: center;
 }
 #remainingGuesses {
     border: 1px solid black;
-    /* height: 150px; */
+    background-color:white;
     font-size: 30px;
     margin: 15px auto;
     text-align: center;
-    /* width: 80%; */
+    width: 80%;
 }
 #guessedLetters {
     border: 1px solid black;
+    color: black;
     height: 40px;
     font-size: 30px;
+    background-color:white;
     margin: 15px auto;
     text-align: center;
-    /* width: 80%; */
+    width: 80%;
+}
+
+h3, h4 {
+    color: white;
 }

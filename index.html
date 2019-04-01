@@ -2,7 +2,6 @@
 <html lang="en-US">
     <head>
         <meta charset="UTF-8">
-
         <!-- Title -->
         <title>Word Guess</title>
         <!-- Link to Reset CSS -->
@@ -15,19 +14,39 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
+        <div class="jumbotron">
+            <h1 id="jumbo-head">Guess the Word!</h1>
+            <h2 id="jumbo-head">Animals for now</h3>
+        </div>
         <div class="container">
                 <!-- <img id="title-image" src="assets/images/hangman-title.png" alt="Hangman Title Image" /> -->
                 <div class="row">
-                    <div class="col-md-6 gameplay-column">
+                    <div class="col-md-6 card-body bg-white text-dark">
                         <!-- <img id="youwin-image" src="assets/images/you-win.png" alt="Winning Image" />
                         <img id="gameover-image" src="assets/images/gameover.png" alt="Game Over Image" /> -->
                         <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
                         <!-- <img id="hangmanImage" src="" alt="" /> -->
                         <h2 id="pressKeyGetStarted">Press Any Key to Get Started!</h2>
                         <h2 id="pressKeyKeepPlaying">Press Any Key to Keep Playing!</h2>
+                        <!-- Win images and songs -->
+                        <img id="winMonkeyImg" src="assets/images/monkey-img-org.jpg" alt="You guessed Monkey!">
+                        <audio id="monkeyAudio">
+                            <source src="assets/audio/Everybodys Got Something To Hide Except Me And My Monkey (Remastered 2009).mp3" type="audio/mp3">
+                        </audio>
+                        <img id="winFishImg" src="assets/images/fish-img-org.jpg" alt="You guessed Fish!">
+                        <audio id="fishAudio"><source src="assets/audio/Ocean Man.mp3" type="audio/mp3"></audio>
+                        <img id="winDonkeyImg" src="assets/images/donkey-img-org.jpeg" alt="You guessed Donkey!">
+                        <audio id="donkeyAudio"><source src="assets/audio/WONKY DONKEY SONG UNOFFICIAL MUSIC VIDEO.mp3" type="audio/mp3"></audio>
+
+                        <img id="winElephantImg" src="assets/images/elephant-img-org.jpg" alt="You guessed Elephant!">
+                        <audio id="elephantAudio"><source src="assets/audio/Baby Elephant Walk.mp3" type="audio/mp3"></audio>
+
+                        <img id="winKangarooImg" src="assets/images/kangaroo-img-org.jpeg" alt="You guessed Kangaroo!">
+                        <audio id ="kangarooAudio"><source src="assets/audio/I'm a Kangaroo Do Do Do Animal Songs by Little Angel.mp3" type="audio/ogg"></audio>
+
 
                     </div>
-                    <div class="col-md-6 gameplay-column">
+                    <div class="col-md-6 card-body bg-dark text-black">
                         <h4>Wins</h4>
                         <p id="totalWins"></p>
                         <h4>Current Word</h4>
